@@ -228,10 +228,11 @@ Panel 3: TORCHBUTT [character image, large]
 - [x] TorchButt character image sourced (AI-generated)
 - [x] **Full comic site built** — redesign inspired by reference site
   - index.html: hero + ticker + latest comic + archive preview + downloads
-  - archive.html: full comic archive with both issues
+  - archive.html: full comic archive with all 3 issues
   - css/styles.css: paper-grain aesthetic, Zine/Impact/Share Tech Mono fonts, ink/green/paper palette
-  - js/app.js: comic modal reader, X share, canvas meme template generator
-  - Assets: `torchbutt.png`, `issue-01.png`, `issue-02.png` (all from reference site)
+  - js/app.js: comic modal reader, X share, punchline editor + canvas download
+  - Assets: `torchbutt.png`, `issue-01.png`, `issue-02.png`, `issue-03.png`
+  - **Quick-ref:** `projects/torchbutt/TORCHBUTT.MD` (for AI sessions)
 - [x] Custom domain `torchbutt.com` live with SSL (Vercel)
 - [ ] Custom font (Zine/headline.otf) — currently using Share Tech Mono + Impact fallback
 - [ ] More comic issues (archive is sparse with only 2)
