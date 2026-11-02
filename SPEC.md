@@ -224,10 +224,15 @@ Panel 3: TORCHBUTT [character image, large]
 
 ## Status (as of 2026-11-02)
 
-- [x] Project directory created
-- [x] SPEC.md written
-- [ ] GitHub repo initialized (`MJ1804/torchbutt`)
-- [ ] TorchButt character image sourced (use provided asset or AI-generate)
-- [ ] index.html built
-- [ ] Vercel project created and deployed
-- [ ] Custom domain configured (future)
+- [x] GitHub repo initialized (`MJ1804/torchbutt`)
+- [x] TorchButt character image sourced (AI-generated)
+- [x] **Full comic site built** — redesign inspired by reference site
+  - index.html: hero + ticker + latest comic + archive preview + downloads
+  - archive.html: full comic archive with both issues
+  - css/styles.css: paper-grain aesthetic, Zine/Impact/Share Tech Mono fonts, ink/green/paper palette
+  - js/app.js: comic modal reader, X share, canvas meme template generator
+  - Assets: `torchbutt.png`, `issue-01.png`, `issue-02.png` (all from reference site)
+- [x] Custom domain `torchbutt.com` live with SSL (Vercel)
+- [ ] Custom font (Zine/headline.otf) — currently using Share Tech Mono + Impact fallback
+- [ ] More comic issues (archive is sparse with only 2)
+- [ ] Meme template assets (isolated transparent PNG variants)

@@ -3,62 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TorchButt — The Meme That Lights Your Behind</title>
-  <meta name="description" content="TorchButt. A butt with a torch. Emerald flame. That's it. That's the meme.">
-  <meta property="og:title" content="TorchButt">
-  <meta property="og:description" content="A butt with a torch. Emerald flame. That's it. That's the meme.">
+  <title>Torchbutt — Unrolled</title>
+  <meta name="description" content="Torchbutt. Comics from the wrong side of the roll. Read the strips and grab the mascot to make your own memes.">
+  <meta property="og:title" content="Torchbutt — Unrolled">
+  <meta property="og:description" content="Comics from the wrong side of the roll. Bad ideas. Green fire.">
   <meta property="og:image" content="assets/torchbutt.png">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="TorchButt">
-  <meta name="twitter:description" content="A butt with a torch. Emerald flame. That's the meme.">
+  <meta name="twitter:title" content="Torchbutt">
+  <meta name="twitter:description" content="Comics from the wrong side of the roll.">
   <meta name="twitter:image" content="assets/torchbutt.png">
+  <link rel="icon" href="assets/torchbutt.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <nav>
-    <span class="nav-logo">TORCHBUTT</span>
-    <div class="nav-links">
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-    </div>
-  </nav>
+  <!-- ─── Header ─── -->
+  <header>
+    <a class="logo" href="#">TORCH<span>BUTT</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#latest">THE COMICS</a>
+      <a href="#archive">ARCHIVE</a>
+      <a href="#downloads">GRAB THE GOODS ↘</a>
+    </nav>
+  </header>
 
   <main>
-    <div class="hero">
-      <img
-        src="assets/torchbutt.png"
-        alt="TorchButt — the meme that lights your behind"
-        id="torchbutt-char"
-        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
-      >
-      <div class="char-fallback" style="display:none">🔥</div>
+
+    <!-- ─── Hero ─── -->
+    <div class="wrap hero">
+      <div class="hero-copy">
+        <span class="edition">THE INTERNET'S LEAST NECESSARY COMIC.</span>
+        <h1>BAD IDEAS.<br><span>GREEN FIRE.</span></h1>
+        <p class="intro">A little grimy. Deeply stupid.<br>Comics from the wrong side of the roll.</p>
+        <a class="btn" href="#latest">START UNROLLING <span>↓</span></a>
+      </div>
+      <div class="hero-art">
+        <span class="bubble">YEAH.<br>THIS GUY AGAIN.</span>
+        <img src="assets/torchbutt.png" alt="Torchbutt, a goofy cartoon mascot with a green flame on his backside">
+        <span class="scribble">zero dignity. excellent silhouette. ↖</span>
+      </div>
     </div>
 
-    <div class="flame-overlay"></div>
+    <!-- ─── Ticker ─── -->
+    <div class="ticker" aria-hidden="true">
+      UNROLL RESPONSIBLY <span>✳</span> LOWBROW. HIGHLY FLAMMABLE. <span>✳</span> UNROLL RESPONSIBLY
+    </div>
 
-    <p class="tagline">THE MEME THAT LIGHTS YOUR BEHIND.</p>
-
-    <div class="cta-group">
-      <button class="btn btn-primary" id="share-btn">
-        <span class="btn-text">SHARE THIS IMAGE</span>
-        <span class="btn-success" style="display:none">COPIED!</span>
+    <!-- ─── Latest Comic ─── -->
+    <section id="latest" class="wrap section">
+      <div class="section-top">
+        <div>
+          <span class="eyebrow">FRESH OFF THE ROLL / 001</span>
+          <h2>Five minutes of peace.</h2>
+        </div>
+        <span class="note">A quiet moment.<br>A terrible discovery.</span>
+      </div>
+      <div class="issue-meta">
+        <span>ISSUE 001 • THE BATHROOM INCIDENT</span>
+        <span>6 PANELS / ONE BAD SURPRISE</span>
+      </div>
+      <button class="comic" data-comic="assets/issue-01.png" aria-label="Open Five minutes of peace comic in full view">
+        <img src="assets/issue-01.png" alt="Six panel comic: a man in a grimy bathroom pulls toilet paper and finds Torchbutt printed on it. He responds: Of course.">
       </button>
-      <a href="assets/torchbutt.png" download="torchbutt.png" class="btn btn-secondary">
-        DOWNLOAD
-      </a>
+      <div class="issue-actions">
+        <span class="note">↑ TAP THE STRIP FOR A CLOSER LOOK</span>
+        <div>
+          <a class="text-link" href="assets/issue-01.png" download="torchbutt-issue-001.png">DOWNLOAD STRIP ↓</a>
+          &nbsp;
+          <button class="text-link" id="share" style="border:0;background:none;cursor:pointer">SHARE ON X ↗</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Archive ─── -->
+    <section class="archive" id="archive">
+      <div class="wrap section">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">MORE QUESTIONABLE READING</span>
+            <h2>From the pile.</h2>
+          </div>
+          <span class="note">THE ARCHIVE / 002</span>
+        </div>
+        <div class="archive-row">
+          <button class="comic" data-comic="assets/issue-02.png" aria-label="Open The scrap-paper Christmas comic">
+            <img src="assets/issue-02.png" loading="lazy" alt="The Grinch questions wasted wrapping paper. A cartoonist recycles a scrap into a Torchbutt drawing. The Grinch threatens to steal his pencils.">
+          </button>
+          <div class="archive-copy">
+            <span class="tag">HOLIDAY SPECIAL • ISSUE 002</span>
+            <h2>The spirit<br>of giving up.</h2>
+            <p>One scrap of wrapping paper. One sincere promise. The Grinch regrets getting involved.</p>
+            <button class="btn" data-comic="assets/issue-02.png">READ THE STRIP ↗</button>
+            <p><a class="text-link" href="assets/issue-02.png" download="torchbutt-issue-002.png">SAVE FOR LATER ↓</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Downloads ─── -->
+    <section id="downloads" class="downloads">
+      <div class="wrap section">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">THE MEME SUPPLY CLOSET</span>
+            <h2>Steal this guy.</h2>
+          </div>
+          <span class="note" style="color:#b8b7ad">DOWNLOAD. DEFACE.<br>MAKE IT WEIRDER.</span>
+        </div>
+        <div class="download-grid">
+          <article class="download-card">
+            <div class="asset-preview">
+              <img src="assets/torchbutt.png" loading="lazy" alt="Isolated Torchbutt mascot on a transparency checkerboard">
+            </div>
+            <h3>The usual suspect.</h3>
+            <p>The isolated mascot, ready to drop into your next terrible idea. Transparent background included.</p>
+            <a class="btn green" href="assets/torchbutt.png" download="torchbutt-transparent.png">DOWNLOAD CHARACTER PNG ↓</a>
+            <div class="asset-info">
+              <span>PNG / TRANSPARENT</span>
+              <span>THE ORIGINAL LITTLE MENACE</span>
+            </div>
+          </article>
+          <article class="download-card">
+            <div class="asset-preview template-preview">
+              <b>YOUR BAD<br>IDEA HERE.</b>
+              <img src="assets/torchbutt.png" loading="lazy" alt="Blank meme template with Torchbutt and space for a caption">
+            </div>
+            <h3>Bring your own punchline.</h3>
+            <p>A blank comic card with room for your caption. Add text in your favorite editor and send it into the void.</p>
+            <a class="btn green" href="#" id="template-download" download="torchbutt-meme-template.png">DOWNLOAD MEME TEMPLATE ↓</a>
+            <div class="asset-info">
+              <span>PNG / 1600 × 1200</span>
+              <span>CAPTION SPACE INCLUDED</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Endcap ─── -->
+    <div class="endcap">
+      <span class="eyebrow">YOU'VE REACHED THE END OF THE ROLL.</span>
+      <h2>Go make something stupid.</h2>
+      <p><a class="text-link" href="#latest">BACK TO THE COMICS ↑</a></p>
     </div>
 
-    <p class="subtext">Tap the flame. You'll understand.</p>
   </main>
 
+  <!-- ─── Footer ─── -->
   <footer>
-    <p>© 2026 TorchButt — a <a href="https://libertytorch.online" target="_blank" rel="noopener">TorchTorch</a> product</p>
-    <p class="footer-sub">Not financial advice. Not legal advice. Not advice of any kind.</p>
+    <a class="logo" href="#">TORCHBUTT</a>
+    <span class="note">COMICS. MEMES. QUESTIONABLE HYGIENE.</span>
+    <a class="text-link" href="#downloads">TAKE A SOUVENIR ↗</a>
   </footer>
 
-  <div class="toast" id="toast"></div>
+  <!-- ─── Comic Reader Modal ─── -->
+  <dialog id="reader" class="modal">
+    <div class="modal-head">
+      <span>TORCHBUTT / FULL STRIP</span>
+      <button id="close" aria-label="Close comic reader">CLOSE ✕</button>
+    </div>
+    <img id="full-comic" alt="Full size Torchbutt comic">
+  </dialog>
+
+  <!-- ─── Toast ─── -->
+  <div role="status" id="toast"></div>
 
   <script src="js/app.js"></script>
 </body>
