@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TorchButt — The Meme That Lights Your Behind</title>
+  <meta name="description" content="TorchButt. A butt with a torch. Emerald flame. That's it. That's the meme.">
+  <meta property="og:title" content="TorchButt">
+  <meta property="og:description" content="A butt with a torch. Emerald flame. That's it. That's the meme.">
+  <meta property="og:image" content="assets/torchbutt.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TorchButt">
+  <meta name="twitter:description" content="A butt with a torch. Emerald flame. That's the meme.">
+  <meta name="twitter:image" content="assets/torchbutt.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav>
+    <span class="nav-logo">TORCHBUTT</span>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="hero">
+      <img
+        src="assets/torchbutt.png"
+        alt="TorchButt — the meme that lights your behind"
+        id="torchbutt-char"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+      >
+      <div class="char-fallback" style="display:none">🔥</div>
+    </div>
+
+    <div class="flame-overlay"></div>
+
+    <p class="tagline">THE MEME THAT LIGHTS YOUR BEHIND.</p>
+
+    <div class="cta-group">
+      <button class="btn btn-primary" id="share-btn">
+        <span class="btn-text">SHARE THIS IMAGE</span>
+        <span class="btn-success" style="display:none">COPIED!</span>
+      </button>
+      <a href="assets/torchbutt.png" download="torchbutt.png" class="btn btn-secondary">
+        DOWNLOAD
+      </a>
+    </div>
+
+    <p class="subtext">Tap the flame. You'll understand.</p>
+  </main>
+
+  <footer>
+    <p>© 2026 TorchButt — a <a href="https://libertytorch.online" target="_blank" rel="noopener">TorchTorch</a> product</p>
+    <p class="footer-sub">Not financial advice. Not legal advice. Not advice of any kind.</p>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+/* ─── Reset & Base ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0D0D0D;
+  --flame: #6EE786;
+  --flame-core: #F5D300;
+  --accent: #FF4D4D;
+  --text: #F5F5F5;
+  --muted: #666666;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* ─── Nav ─── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #222;
+}
+
+.nav-logo {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 1.5rem;
+  color: var(--flame);
+  letter-spacing: 0.05em;
+  cursor: default;
+  user-select: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--flame);
+}
+
+/* ─── Main ─── */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 3rem;
+  text-align: center;
+  position: relative;
+}
+
+/* ─── Hero Character ─── */
+.hero {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+#torchbutt-char {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  cursor: default;
+  /* subtle drop shadow to lift off bg */
+  filter: drop-shadow(0 0 30px rgba(110, 231, 134, 0.2));
+}
+
+#torchbutt-char:hover {
+  transform: scale(1.02);
+}
+
+.char-fallback {
+  width: 100%;
+  height: 400px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+}
+
+/* ─── Flame Overlay Effect ─── */
+.flame-overlay {
+  position: relative;
+  margin-top: -3rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 600px;
+  height: 120px;
+  background: linear-gradient(
+    to top,
+    transparent 0%,
+    rgba(110, 231, 134, 0.08) 40%,
+    rgba(245, 211, 0, 0.06) 70%,
+    transparent 100%
+  );
+  pointer-events: none;
+  animation: flameFlicker 2s ease-in-out infinite alternate;
+  border-radius: 0 0 8px 8px;
+}
+
+@keyframes flameFlicker {
+  0%   { opacity: 0.6; transform: scaleY(1); }
+  33%  { opacity: 0.9; transform: scaleY(1.05); }
+  66%  { opacity: 0.7; transform: scaleY(0.97); }
+  100% { opacity: 1;   transform: scaleY(1.03); }
+}
+
+/* ─── Tagline ─── */
+.tagline {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  color: var(--flame);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 20px rgba(110, 231, 134, 0.4);
+  line-height: 1.2;
+}
+
+/* ─── CTA Buttons ─── */
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, color 0.2s;
+  text-decoration: none;
+  min-width: 160px;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: var(--flame);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #8CF09D;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid var(--text);
+}
+
+.btn-secondary:hover {
+  background: var(--text);
+  color: var(--bg);
+}
+
+.btn-success {
+  color: #000;
+}
+
+/* ─── Subtext ─── */
+.subtext {
+  font-size: 0.8rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
+/* ─── Toast ─── */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  background: var(--flame);
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  transition: transform 0.3s ease;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ─── Gallery Grid ─── */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem 0;
+}
+
+.gallery-item {
+  background: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border: 1px solid #2a2a2a;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ─── About Page ─── */
+.about-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  text-align: left;
+}
+
+.about-content h1 {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 2.5rem;
+  color: var(--flame);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  font-size: 1.25rem;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 2rem 0 0.75rem;
+}
+
+.about-content p {
+  color: #ccc;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.about-content .big-flame {
+  font-size: 4rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* ─── Footer ─── */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid #1a1a1a;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+footer a {
+  color: var(--flame);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-sub {
+  font-size: 0.7rem;
+  color: #444;
+  margin-top: 0.25rem;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 480px) {
+  nav {
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-logo {
+    font-size: 1.2rem;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+    min-width: 140px;
+    padding: 0.6rem 1rem;
+  }
+}
