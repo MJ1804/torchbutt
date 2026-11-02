@@ -25,7 +25,7 @@ if (shareBtn) {
   shareBtn.addEventListener('click', () => {
     const url = new URL(location.href);
     url.hash = 'latest';
-    const text = encodeURIComponent('Five minutes of peace. Of course. 🔥 #Torchbutt');
+    const text = encodeURIComponent('The coin incident. Of course. 🔥 #Torchbutt');
     const encodedUrl = encodeURIComponent(url.href);
     window.open(
       `https://twitter.com/intent/tweet?text=${text}&url=${encodedUrl}`,
