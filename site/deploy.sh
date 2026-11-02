@@ -33,6 +33,20 @@ if [[ "$WHOAMI" != "mj1804" ]]; then
 fi
 echo "Auth OK: $WHOAMI"
 
+# Hide workspace-level .vercel to prevent Vercel CLI from deploying to the wrong project
+WORKSPACE_VERCEL="/root/.openclaw/workspace/.vercel"
+if [[ -d "$WORKSPACE_VERCEL" ]]; then
+  mv "$WORKSPACE_VERCEL" "$WORKSPACE_VERCEL.bak"
+  VERCEL_HIDDEN=true
+fi
+
+cleanup() {
+  if [[ "$VERCEL_HIDDEN" == "true" ]]; then
+    mv "$WORKSPACE_VERCEL.bak" "$WORKSPACE_VERCEL"
+  fi
+}
+trap cleanup EXIT
+
 echo "Deploying..."
 npx vercel deploy --prod --yes 2>&1
 echo ""

@@ -435,6 +435,87 @@ h3 { font-size: 22px; margin: 8px 0 15px; }
   background: white;
   max-width: 68%;
   z-index: 1;
+  white-space: pre-line;
+  overflow-wrap: break-word;
+  transition: font-size 0.1s ease;
+}
+
+/* Slightly smaller type once the user starts typing real content */
+.template-preview b.is-filled {
+  font-size: 28px;
+  line-height: 1.05;
+}
+
+/* ─── Punchline editor ─── */
+.punchline-card .asset-preview {
+  margin-bottom: 20px;
+}
+
+.punchline-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.punchline-form label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--green);
+  font-weight: bold;
+}
+
+.punchline-form textarea {
+  width: 100%;
+  resize: vertical;
+  min-height: 56px;
+  max-height: 130px;
+  padding: 12px 14px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--paper);
+  background: #0d0e0b;
+  border: 2px solid rgba(238,234,222,0.35);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.punchline-form textarea::placeholder {
+  color: #6b6c62;
+  text-transform: uppercase;
+}
+
+.punchline-form textarea:focus {
+  outline: 3px solid var(--green);
+  outline-offset: 2px;
+  border-color: var(--green);
+}
+
+.punchline-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.punchline-count {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  color: #aaa99e;
+}
+
+.punchline-form .btn {
+  min-width: 210px;
+}
+
+.punchline-form .btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+  transform: none;
 }
 
 .download-card h3 {

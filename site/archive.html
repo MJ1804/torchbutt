@@ -104,14 +104,21 @@
               <span>THE ORIGINAL LITTLE MENACE</span>
             </div>
           </article>
-          <article class="download-card">
-            <div class="asset-preview template-preview">
-              <b>YOUR BAD<br>IDEA HERE.</b>
+          <article class="download-card punchline-card">
+            <div class="asset-preview template-preview" id="punchline-preview">
+              <b id="punchline-text">YOUR BAD<br>IDEA HERE.</b>
               <img src="assets/torchbutt.png" loading="lazy" alt="Blank meme template">
             </div>
             <h3>Bring your own punchline.</h3>
-            <p>A blank comic card with room for your caption. Add text in your favorite editor and send it into the void.</p>
-            <a class="btn green" href="#" id="template-download" download="torchbutt-meme-template.png">DOWNLOAD MEME TEMPLATE ↓</a>
+            <p>Type a caption, watch it land on the card, then download the finished image.</p>
+            <form class="punchline-form" id="punchline-form" autocomplete="off">
+              <label for="punchline-input">YOUR CAPTION</label>
+              <textarea id="punchline-input" rows="2" maxlength="80" placeholder="e.g. IT SEEMED LIKE A GOOD IDEA"></textarea>
+              <div class="punchline-row">
+                <span class="punchline-count"><span id="punchline-count">0</span>/80</span>
+                <button type="submit" class="btn green" id="punchline-download">DOWNLOAD MY CARD ↓</button>
+              </div>
+            </form>
             <div class="asset-info">
               <span>PNG / 1600 × 1200</span>
               <span>CAPTION SPACE INCLUDED</span>

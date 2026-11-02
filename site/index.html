@@ -116,28 +116,6 @@
         </div>
       </div>
     </section>
-      <div class="wrap section">
-        <div class="section-top">
-          <div>
-            <span class="eyebrow">MORE QUESTIONABLE READING</span>
-            <h2>From the pile.</h2>
-          </div>
-          <span class="note">THE ARCHIVE / 002</span>
-        </div>
-        <div class="archive-row">
-          <button class="comic" data-comic="assets/issue-02.png" aria-label="Open The scrap-paper Christmas comic">
-            <img src="assets/issue-02.png" loading="lazy" alt="The Grinch questions wasted wrapping paper. A cartoonist recycles a scrap into a Torchbutt drawing. The Grinch threatens to steal his pencils.">
-          </button>
-          <div class="archive-copy">
-            <span class="tag">HOLIDAY SPECIAL • ISSUE 002</span>
-            <h2>The spirit<br>of giving up.</h2>
-            <p>One scrap of wrapping paper. One sincere promise. The Grinch regrets getting involved.</p>
-            <button class="btn" data-comic="assets/issue-02.png">READ THE STRIP ↗</button>
-            <p><a class="text-link" href="assets/issue-02.png" download="torchbutt-issue-002.png">SAVE FOR LATER ↓</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ─── Downloads ─── -->
     <section id="downloads" class="downloads">
@@ -162,14 +140,21 @@
               <span>THE ORIGINAL LITTLE MENACE</span>
             </div>
           </article>
-          <article class="download-card">
-            <div class="asset-preview template-preview">
-              <b>YOUR BAD<br>IDEA HERE.</b>
+          <article class="download-card punchline-card">
+            <div class="asset-preview template-preview" id="punchline-preview">
+              <b id="punchline-text">YOUR BAD<br>IDEA HERE.</b>
               <img src="assets/torchbutt.png" loading="lazy" alt="Blank meme template with Torchbutt and space for a caption">
             </div>
             <h3>Bring your own punchline.</h3>
-            <p>A blank comic card with room for your caption. Add text in your favorite editor and send it into the void.</p>
-            <a class="btn green" href="#" id="template-download" download="torchbutt-meme-template.png">DOWNLOAD MEME TEMPLATE ↓</a>
+            <p>Type a caption, watch it land on the card, then download the finished image.</p>
+            <form class="punchline-form" id="punchline-form" autocomplete="off">
+              <label for="punchline-input">YOUR CAPTION</label>
+              <textarea id="punchline-input" rows="2" maxlength="80" placeholder="e.g. IT SEEMED LIKE A GOOD IDEA"></textarea>
+              <div class="punchline-row">
+                <span class="punchline-count"><span id="punchline-count">0</span>/80</span>
+                <button type="submit" class="btn green" id="punchline-download">DOWNLOAD MY CARD ↓</button>
+              </div>
+            </form>
             <div class="asset-info">
               <span>PNG / 1600 × 1200</span>
               <span>CAPTION SPACE INCLUDED</span>
